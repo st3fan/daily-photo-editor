@@ -1,0 +1,16 @@
+<center>
+
+    <h1>Image {{.Name}} ({{.Time}})</h1>
+
+    <img src="/photo/{{.Index}}" width="320" height="320"/>
+
+    <p>
+        <form method="POST" action="/save/{{.Index}}">
+            <input type="text" size="80" length="80" name="caption" value="{{.Caption}}"/>
+            <input type="submit"/>
+        </form>
+    </p>
+
+    <p></p><a href="/edit/{{.Previous}}">Previous</a> - <a href="/edit/{{.Next}}">Next</a></p>
+
+</center>
